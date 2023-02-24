@@ -1,0 +1,19 @@
+.card-li{
+  text-align: center;
+  list-style: none;
+  border: 1px solid black;
+  width: 500px;
+  margin-bottom: 50px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-li img{
+  width: 350px;
+  /* height: 350px; */
+  object-fit: cover;
+  border-radius: 10px;
+}

@@ -1,3 +1,6 @@
+import Card from "./components/Card";
+import "./styles.css"
+
 const productos = [
   {
       "id": 0,
@@ -27,27 +30,10 @@ const productos = [
 
 function App() {
   return (
-    <div>
+    <div className="container-card">
       <h1>Productos</h1>
-
-      <ul>
-        <li>
-          <h2>{productos[0].nombre}</h2>
-          <img src={productos[0].imagen} />
-          <h3>{productos[0].precio}</h3>
-        </li>
-
-        <li>
-          <h2>{productos[1].nombre}</h2>
-          <img src={productos[1].imagen} />
-          <h3>{productos[1].precio}</h3>
-        </li>
-
-        <li>
-          <h2>{productos[2].nombre}</h2>
-          <img src={productos[2].imagen} />
-          <h3>{productos[2].precio}</h3>
-        </li>
+      <ul style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
+        {productos.map((producto) => <Card productos ={producto} key={producto.id}/>)}
       </ul>
     </div>
   );
